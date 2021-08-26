@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lists</h1>
+<h1>Current Items</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
     <tr>
       <th>Item</th>
       <th>Quantity</th>
@@ -27,7 +27,5 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
 
 <%= link_to 'New List', new_list_path %>
