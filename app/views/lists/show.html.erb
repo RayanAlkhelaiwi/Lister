@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Item:</strong>
-  <%= @list.item %>
-</p>
+<div class="jumbotron">
+  <p class="lead">Item:
+    <strong>
+      <%= @list.item %>
+    </strong>
+  </p>
+  <p class="lead">Quantity:
+    <strong>
+      <%= @list.quantity %>
+    </strong>
+  </p>
+  <p class="lead">Owner:
+    <strong>
+      <%= @list.owner %>
+    </strong>
+  </p>
+    <p class="lead">Created:
+    <strong>
+      <%= @list.timestamp %>
+    </strong>
+  </p>
+  <hr class="my-4">
+</div>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @list.quantity %>
-</p>
-
-<p>
-  <strong>Owner:</strong>
-  <%= @list.owner %>
-</p>
-
-<p>
-  <strong>Timestamp:</strong>
-  <%= @list.timestamp %>
-</p>
-
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<%= link_to 'Edit', edit_list_path(@list), class:"btn btn-dark" %> &nbsp;
+<%= link_to 'Back', lists_path, class:"btn btn-secondary" %>

@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :item %>
-    <%= form.text_field :item %>
+    <%= form.text_field :item, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity %>
+    <%= form.number_field :quantity, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :owner %>
-    <%= form.text_field :owner %>
+    <%= form.text_field :owner, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :timestamp %>
-    <%= form.datetime_select :timestamp %>
+    <%= form.datetime_select :timestamp, class:"form-control" %>
   </div>
 
   <div class="actions">
