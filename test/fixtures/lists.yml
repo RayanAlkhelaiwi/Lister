@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  quantity: 1
+  owner: MyString
+  timestamp: 2021-08-26 15:45:01
+
+two:
+  item: MyString
+  quantity: 1
+  owner: MyString
+  timestamp: 2021-08-26 15:45:01
