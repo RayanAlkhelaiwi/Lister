@@ -30,11 +30,11 @@
   <div class="field form-group">
     <%= form.label :"Date & " %>
     <%= form.label :"Time" %>
-    <%= form.datetime_select :timestamp %>
+    <%= form.datetime_select :timestamp, class:"form-select", class:"form-select" %>
   </div>
   <br/>
 
-  <div class="actions">
+  <div class="btn btn-dark">
     <%= form.submit %>
   </div>
 <% end %>
