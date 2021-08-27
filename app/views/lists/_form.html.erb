@@ -13,23 +13,26 @@
 
   <div class="field form-group">
     <%= form.label :item %>
-    <%= form.text_field :item, class:"form-control" %>
+    <%= form.text_field :item, class:"form-control", placeholder:"E.g. iPhone, Pizza, ...etc" %>
   </div>
 
   <div class="field form-group">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity, class:"form-control" %>
+    <%= form.number_field :quantity, class:"form-control", placeholder:"E.g. 512" %>
   </div>
 
   <div class="field form-group">
     <%= form.label :owner %>
-    <%= form.text_field :owner, class:"form-control" %>
+    <%= form.text_field :owner, class:"form-control", placeholder:"E.g. Joana Doe?" %>
   </div>
-
+  
+  <br/>
   <div class="field form-group">
-    <%= form.label :timestamp %>
-    <%= form.datetime_select :timestamp, class:"form-control" %>
+    <%= form.label :"Date & " %>
+    <%= form.label :"Time" %>
+    <%= form.datetime_select :timestamp %>
   </div>
+  <br/>
 
   <div class="actions">
     <%= form.submit %>
