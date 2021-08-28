@@ -1,8 +1,10 @@
-<br/>
-<h1>New Item</h1>
+<% if user_signed_in? %>
+    <br/>
+    <h1>New Item</h1>
 
-<%= render 'form', list: @list %>
+    <%= render 'form', list: @list %>
 
-<br/>
-<%= link_to 'Back', lists_path, class:"btn btn-secondary" %>
-<br/><br/>
+    <br/>
+    <%= link_to 'Back', lists_path, class:"btn btn-secondary" %>
+    <br/><br/>
+<% end %>
