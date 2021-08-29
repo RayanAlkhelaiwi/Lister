@@ -4,21 +4,18 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+  <div class="field form-group w-25">
+    <%= f.label :password, "New password" %>(<% if @minimum_password_length %><em><%= @minimum_password_length %> characters min</em><% end %>)<br />
+    <%= f.password_field :password, class:"form-control", autofocus: true, autocomplete: "new-password" %>
   </div>
-
-  <div class="field">
+  <br/>
+  <div class="field form-group w-25">
     <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, class:"form-control", autocomplete: "new-password" %>
   </div>
-
+  <br/>
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit "Change my password", class:"btn btn-dark" %>
   </div>
 <% end %>
 
