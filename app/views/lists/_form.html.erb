@@ -25,6 +25,11 @@
     <%= form.label :owner %>
     <%= form.text_field :owner, class:"form-control", placeholder:"E.g. Joana Doe?" %>
   </div>
+
+  <div class="field form-group">
+    <%= form.number_field :user_id, value: current_user.id, id: :list_user_id, class:"form-control", type: :hidden %>
+    <p>Current User ID: <%= form.label current_user.id %></p>
+  </div>
   
   <br/>
   <div class="field form-group">

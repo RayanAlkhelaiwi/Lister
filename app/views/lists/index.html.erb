@@ -3,9 +3,11 @@
 <table class="table table-striped table-hover table-bordered text-center">
   <thead class="table-dark">
     <tr>
+      <th>Item ID</th>
       <th>Item</th>
       <th>Quantity</th>
       <th>Owner</th>
+      <th>User ID</th>
       <th>Timestamp</th>
         <th colspan="3"> Options</th>
     </tr>
@@ -13,17 +15,29 @@
 
   <tbody>
     <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.item %></td>
-        <td><%= list.quantity %></td>
-        <td><%= list.owner %></td>
-        <td><%= list.timestamp %></td>
-        <td><%= link_to 'Show', list, class:"btn" %></td>
-        <% if user_signed_in? %>
+      <% if list.user == current_user %>
+        <tr>
+          <td><%= list.id %></td>
+          <td><%= list.item %></td>
+          <td><%= list.quantity %></td>
+          <td><%= list.owner %></td>
+          <td><%= list.user_id %></td>
+          <td><%= list.timestamp %></td>
+          <td><%= link_to 'Show', list, class:"btn" %></td>
           <td><%= link_to 'Edit', edit_list_path(list), class:"btn" %></td>
           <td><%= link_to 'Delete', list, method: :delete, data: { confirm: "Do you confirm deleting #{list.item}?" }, class:"btn" %></td>
-        <% end %>
-      </tr>
+        </tr>
+      <% elsif !user_signed_in? %>
+        <tr>
+          <td><%= list.id %></td>
+          <td><%= list.item %></td>
+          <td><%= list.quantity %></td>
+          <td><%= list.owner %></td>
+          <td><%= list.user_id %></td>
+          <td><%= list.timestamp %></td>
+          <td><%= link_to 'Show', list, class:"btn" %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

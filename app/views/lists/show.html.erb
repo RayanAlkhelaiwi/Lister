@@ -2,6 +2,11 @@
 <div class="card-header"><h2>Item Info</h2></div>
 <div class="card-body">
 <div>
+  <p class="lead">Item ID:
+    <strong>
+      <%= @list.id %>
+    </strong>
+  </p>
   <p class="lead">Item:
     <strong>
       <%= @list.item %>
@@ -16,7 +21,12 @@
     <strong>
       <%= @list.owner %>
     </strong>
-  </p>
+    </p>
+      <p class="lead">User ID:
+      <strong>
+        <%= @list.user_id %>
+      </strong>
+    </p>
     <p class="lead">Created:
     <strong>
       <%= @list.timestamp %>
