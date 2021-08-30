@@ -2,7 +2,7 @@
 
 A Ruby on Rails Web App/API that applies CRUD functions to create a listing app, to get to know the framework.
 
-Click for ![Demo](https://lister-ror.herokuapp.com/)
+Click for [Demo](https://lister-ror.herokuapp.com/)
 
 ![Listet](assets/items_table.png)
 
